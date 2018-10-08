@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/user_feed"
+        android:title=""
+        android:icon="@drawable/ic_dicover"/>
+    <item
+        android:id="@+id/discover"
+        android:title=""
+        android:icon="@drawable/ic_dicover"/>
+    <item
+        android:id="@+id/upload_photo"
+        android:title=""
+        android:icon="@drawable/ic_dicover"/>
+    <item
+        android:id="@+id/activity_feed"
+        android:title=""
+        android:icon="@drawable/ic_dicover"/>
+    <item
+        android:id="@+id/profile"
+        android:title=""
+        android:icon="@drawable/ic_dicover"/>
+
+</menu>
