@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 
+/*
+* display discover
+* */
 public class DiscoverActivity extends AppCompatActivity {
     private static final String TAG = "DiscoverActivity";
 

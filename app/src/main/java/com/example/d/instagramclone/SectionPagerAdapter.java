@@ -8,6 +8,9 @@ import android.support.v4.app.ListFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+* set top bar
+* */
 public class SectionPagerAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> fragmentList = new ArrayList<>();

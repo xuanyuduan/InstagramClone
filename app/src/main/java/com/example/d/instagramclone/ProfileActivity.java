@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 
+/*
+* display profile
+* */
 public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = "ProfileActivity";
 

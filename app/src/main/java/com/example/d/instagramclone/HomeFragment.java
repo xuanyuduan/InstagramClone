@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/*
+* top bar fragment
+* */
 public class HomeFragment extends Fragment {
     @Nullable
     @Override

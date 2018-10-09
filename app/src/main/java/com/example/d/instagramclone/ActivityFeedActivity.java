@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 
+/*
+* display activity
+* */
 public class ActivityFeedActivity extends AppCompatActivity {
     private static final String TAG = "ActivityFeedActivity";
 

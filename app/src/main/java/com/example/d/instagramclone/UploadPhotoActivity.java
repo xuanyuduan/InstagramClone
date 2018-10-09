@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 
+/*
+* camera function
+* */
 public class UploadPhotoActivity extends AppCompatActivity {
     private static final String TAG = "UploadPhotoActivity";
 

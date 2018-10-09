@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/*
+* top bar
+* camera function
+* */
 public class CameraFragment extends Fragment {
     @Nullable
     @Override

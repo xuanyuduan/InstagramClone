@@ -9,12 +9,18 @@ import android.view.MenuItem;
 
 import java.sql.BatchUpdateException;
 
+/*
+* set bottom navigation bar
+* */
 public class SetBottomNavigation {
 
     private static final String TAG = "BottomNav";
 
     public static void setupBottomNavigationView (final Context context, BottomNavigationView bottomNavigationView)
     {
+        /*
+        * transfer activity
+        * */
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
