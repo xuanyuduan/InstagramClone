@@ -16,10 +16,10 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_home);
         Log.d(TAG, "startActivity");
 
-//        setupBottomNavigationView();
+        setupBottomNavigationView();
 
     }
 
