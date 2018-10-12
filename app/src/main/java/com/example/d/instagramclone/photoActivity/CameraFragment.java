@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.photoActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.d.instagramclone.R;
+
 
 /*
 * top bar
@@ -20,8 +22,8 @@ import android.widget.ImageView;
 * */
 public class CameraFragment extends Fragment {
 
-    ImageView imageView;
-    Button buttonCamera;
+    public ImageView imageView;
+    public Button buttonCamera;
 
     @Nullable
     @Override

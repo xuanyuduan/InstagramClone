@@ -12,9 +12,10 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
-            android:id="@+id/mainLayoutTop"
+            android:id="@+id/relativeLayout1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
 
             <include layout="@layout/main_top_tabs"/>
 
@@ -26,13 +27,11 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/mainLayoutTop">
 
-            <include layout="@layout/main_body"/>
+            <include layout="@layout/main_body" />
 
         </RelativeLayout>
 
-        <include layout="@layout/upload_photo_bottom"/>
-
-
+        <include layout="@layout/upload_photo_bottom" />
 
 
     </RelativeLayout>
