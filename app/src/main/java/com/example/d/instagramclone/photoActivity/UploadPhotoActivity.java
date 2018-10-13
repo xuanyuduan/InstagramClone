@@ -18,19 +18,25 @@ import com.example.d.instagramclone.SectionPagerAdapter;
 import com.example.d.instagramclone.SetBottomNavigation;
 
 /*
-* camera function
-* */
+ * camera function
+ * */
 public class UploadPhotoActivity extends AppCompatActivity {
     private static final String TAG = "UploadPhotoActivity";
     private static final int VERIFY_PERMISSIONS_REQUEST = 1;
     private Context mContext = UploadPhotoActivity.this;
-    ViewPager mViewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
+    ViewPager mViewPager;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_upload_photo);
+        mViewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
         Log.d(TAG, "startActivity");
+
+
+
 
         //check permissions
         if(checkPermissionArray(Permissions.PERMISSIONS)){
@@ -45,21 +51,29 @@ public class UploadPhotoActivity extends AppCompatActivity {
      * set up the viewPager for other fragments to use.
      */
     private void setupBottomNavigationView() {
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.mainBottomNav);
-        SetBottomNavigation setBottomNavigation = new SetBottomNavigation();
-        setBottomNavigation.setupBottomNavigationView(mContext, bottomNavigationView);
-        Menu menu = bottomNavigationView.getMenu();
-        menu.findItem(R.id.upload_photo).setChecked(true);
+//        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.mainBottomNav);
+//        SetBottomNavigation setBottomNavigation = new SetBottomNavigation();
+//        setBottomNavigation.setupBottomNavigationView(mContext, bottomNavigationView);
+//        Menu menu = bottomNavigationView.getMenu();
+//        menu.findItem(R.id.upload_photo).setChecked(true);
 
         SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
         sectionPagerAdapter.addFragment(new GalleryFragment());
         sectionPagerAdapter.addFragment(new PhotoFragment());
-
-        //ViewPager mViewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
+        // ViewPager viewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
         mViewPager.setAdapter(sectionPagerAdapter);
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.uploadPhotoBottom);
         tabLayout.setupWithViewPager(mViewPager);
+
+//        SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
+//        sectionPagerAdapter.addFragment(new GalleryFragment());
+//        sectionPagerAdapter.addFragment(new PhotoFragment());
+
+        //ViewPager mViewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
+//        mViewPager.setAdapter(sectionPagerAdapter);
+
+//        TabLayout tabLayout = (TabLayout) findViewById(R.id.uploadPhotoBottom);
+//        tabLayout.setupWithViewPager(mViewPager);
 
         tabLayout.getTabAt(0).setText("GALLERY");
         tabLayout.getTabAt(1).setText("PHOTO");

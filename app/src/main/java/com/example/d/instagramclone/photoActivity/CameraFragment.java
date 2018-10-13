@@ -17,9 +17,9 @@ import com.example.d.instagramclone.R;
 
 
 /*
-* top bar
-* camera function
-* */
+ * top bar
+ * camera function
+ * */
 public class CameraFragment extends Fragment {
 
     public ImageView imageView;
@@ -30,8 +30,9 @@ public class CameraFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_camera, container,false);
 
-        buttonCamera = buttonCamera.findViewById(R.id.buttonCamera);
-        imageView = imageView.findViewById(R.id.imageView);
+
+        buttonCamera = (Button) view.findViewById(R.id.buttonCamera);
+        imageView = (ImageView) view.findViewById(R.id.imageView);
 
         buttonCamera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,4 +53,4 @@ public class CameraFragment extends Fragment {
     }
 
 
-    }
+}

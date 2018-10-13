@@ -71,3 +71,4 @@ public class PhotoFragment extends Fragment {
         }
     }
 }
+
