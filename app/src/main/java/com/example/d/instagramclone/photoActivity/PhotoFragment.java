@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.photoActivity;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,7 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class GalleryFragment extends Fragment {
+import com.example.d.instagramclone.R;
+
+public class PhotoFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

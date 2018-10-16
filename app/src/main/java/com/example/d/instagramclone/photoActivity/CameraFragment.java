@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.photoActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.d.instagramclone.R;
 
 
 /*
@@ -28,17 +30,17 @@ public class CameraFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_camera, container,false);
 
-        buttonCamera = buttonCamera.findViewById(R.id.buttonCamera);
-        imageView = imageView.findViewById(R.id.imageView);
-
-        buttonCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
-                //intent.putExtra(MediaStore.EXTRA_OUTPUT, )
-            }
-        });
+//        buttonCamera = buttonCamera.findViewById(R.id.buttonCamera);
+//        imageView = imageView.findViewById(R.id.imageView);
+//
+//        buttonCamera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivityForResult(intent, 0);
+//                //intent.putExtra(MediaStore.EXTRA_OUTPUT, )
+//            }
+//        });
         return view;
     }
 

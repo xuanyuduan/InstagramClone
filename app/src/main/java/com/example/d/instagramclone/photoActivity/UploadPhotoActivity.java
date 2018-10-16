@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.photoActivity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
+
+import com.example.d.instagramclone.R;
+import com.example.d.instagramclone.function.SectionPagerAdapter;
+import com.example.d.instagramclone.function.SetBottomNavigation;
 
 /*
 * camera function

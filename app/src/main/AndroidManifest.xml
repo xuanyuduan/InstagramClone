@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+        <activity android:name=".userFeedActivity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,11 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".DiscoverActivity"/>
-        <activity android:name=".UploadPhotoActivity"/>
+        <activity android:name=".photoActivity.UploadPhotoActivity"/>
         <activity android:name=".ActivityFeedActivity"/>
         <activity android:name=".ProfileActivity"/>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".loginActivity.LoginActivity"/>
+        <activity android:name=".loginActivity.RegisterActivity"/>
     </application>
 
 </manifest>

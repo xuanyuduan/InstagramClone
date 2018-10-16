@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.loginActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,62 +12,67 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.d.instagramclone.userFeedActivity.HomeActivity;
+import com.example.d.instagramclone.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class RegisterActivity extends AppCompatActivity{
+public class LoginActivity extends AppCompatActivity{
 
-    private static final String TAG = "RegisterActivity";
+    private static final String TAG = "LoginActivity";
+    TextInputEditText input_email, input_password;
+    TextView register;
+    AppCompatButton loginBtn;
+
+
     private FirebaseAuth mAuth;
-    TextInputEditText input_email, input_username, input_password;
-    AppCompatButton registerBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+
+        setContentView(R.layout.activity_login);
         Log.d(TAG, "startActivity");
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         input_email = (TextInputEditText) findViewById(R.id.input_email);
-        input_username = (TextInputEditText)findViewById(R.id.input_username);
         input_password = (TextInputEditText) findViewById(R.id.input_password);
-        registerBtn = (AppCompatButton) findViewById(R.id.register_btn);
+        loginBtn = (AppCompatButton) findViewById(R.id.login_btn);
+        register = (TextView) findViewById(R.id.create_new_account);
 
-        registerBtn.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = input_email.getText().toString();
                 String password = input_password.getText().toString();
-                String username = input_username.getText().toString();
 
-                if (email.equals("") || password.equals("") || username.equals(""))
+                if (email.equals("") || password.equals(""))
                 {
-                    Toast.makeText(RegisterActivity.this, "Please fill in necessary information", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please fill in necessary information", Toast.LENGTH_SHORT).show();
                 }
                 else {
 
-                    mAuth.createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
+                    mAuth.signInWithEmailAndPassword(email, password)
+                            .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
-                                        Log.d(TAG, "createUserWithEmail:success");
+                                        Log.d(TAG, "signInWithEmail:success");
                                         FirebaseUser user = mAuth.getCurrentUser();
-                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+//                                    updateUI(user);
+                                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                         startActivity(intent);
-//                                        updateUI(user);
                                     } else {
                                         // If sign in fails, display a message to the user.
-                                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                        Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                        Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                        Toast.makeText(LoginActivity.this, "Authentication failed.",
                                                 Toast.LENGTH_SHORT).show();
-//                                        updateUI(null);
+//                                    updateUI(null);
                                     }
 
                                     // ...
@@ -78,12 +83,20 @@ public class RegisterActivity extends AppCompatActivity{
             }
         });
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intentRegister = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intentRegister);
+
+            }
+        });
 
 
 
+}
 
-
-    }
 
     @Override
     public void onStart() {
