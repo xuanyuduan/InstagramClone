@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 
+import com.example.d.instagramclone.function.SetBottomNavigation;
+
 /*
 * display activity
 * */

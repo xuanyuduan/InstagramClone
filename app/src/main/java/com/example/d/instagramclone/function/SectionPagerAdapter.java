@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.function;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

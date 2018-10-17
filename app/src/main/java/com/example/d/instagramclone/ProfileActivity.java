@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 
+import com.example.d.instagramclone.function.SetBottomNavigation;
+
 /*
 * display profile
 * */
@@ -19,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         Log.d(TAG, "startActivity");
 
-        setupBottomNavigationView();
+//        setupBottomNavigationView();
 
     }
 

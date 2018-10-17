@@ -17,31 +17,30 @@ import com.example.d.instagramclone.R;
 
 
 /*
- * top bar
- * camera function
- * */
+* top bar
+* camera function
+* */
 public class CameraFragment extends Fragment {
 
-    public ImageView imageView;
-    public Button buttonCamera;
+    ImageView imageView;
+    Button buttonCamera;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_camera, container,false);
 
-
-        buttonCamera = (Button) view.findViewById(R.id.buttonCamera);
-        imageView = (ImageView) view.findViewById(R.id.imageView);
-
-        buttonCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
-                //intent.putExtra(MediaStore.EXTRA_OUTPUT, )
-            }
-        });
+//        buttonCamera = buttonCamera.findViewById(R.id.buttonCamera);
+//        imageView = imageView.findViewById(R.id.imageView);
+//
+//        buttonCamera.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                startActivityForResult(intent, 0);
+//                //intent.putExtra(MediaStore.EXTRA_OUTPUT, )
+//            }
+//        });
         return view;
     }
 
@@ -53,4 +52,4 @@ public class CameraFragment extends Fragment {
     }
 
 
-}
+    }

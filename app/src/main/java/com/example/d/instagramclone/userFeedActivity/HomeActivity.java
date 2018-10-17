@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.userFeedActivity;
 
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.Menu;
 
 import com.example.d.instagramclone.photoActivity.CameraFragment;
+import com.example.d.instagramclone.R;
+import com.example.d.instagramclone.function.SectionPagerAdapter;
+import com.example.d.instagramclone.function.SetBottomNavigation;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

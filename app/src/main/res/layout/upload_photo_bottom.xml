@@ -11,15 +11,14 @@
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TabLayout
+
                 android:id="@+id/uploadPhotoBottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/main_bottom_border">
-
-            </android.support.design.widget.TabLayout>
+                android:background="@drawable/main_bottom_border" />
 
         </android.support.design.widget.AppBarLayout>
-
+            
 
     </RelativeLayout>
 

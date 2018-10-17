@@ -1,4 +1,4 @@
-package com.example.d.instagramclone;
+package com.example.d.instagramclone.function;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 
+import com.example.d.instagramclone.ActivityFeedActivity;
+import com.example.d.instagramclone.DiscoverActivity;
+import com.example.d.instagramclone.userFeedActivity.HomeActivity;
+import com.example.d.instagramclone.ProfileActivity;
+import com.example.d.instagramclone.R;
 import com.example.d.instagramclone.photoActivity.UploadPhotoActivity;
 
 /*
