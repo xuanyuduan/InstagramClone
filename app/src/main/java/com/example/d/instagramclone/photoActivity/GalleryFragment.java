@@ -42,7 +42,6 @@ public class GalleryFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-<<<<<<< HEAD
         View view = inflater.inflate(R.layout.fragment_gallery, container,false);
         galleryImage = (ImageView)view.findViewById(R.id.galleryImageView);
         gridView  = (GridView)view.findViewById(R.id.gridView);
@@ -75,10 +74,6 @@ public class GalleryFragment extends Fragment {
 
             }
         });
-=======
-        View view = inflater.inflate(R.layout.fragment_camera, container,false);
->>>>>>> f3179a5b77bea0adba0bf97a99f6b45e721e9963
-
 
         init();
         return view;
