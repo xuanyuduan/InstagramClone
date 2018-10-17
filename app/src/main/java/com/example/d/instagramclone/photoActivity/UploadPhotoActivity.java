@@ -16,6 +16,8 @@ import android.webkit.WebBackForwardList;
 import com.example.d.instagramclone.R;
 import com.example.d.instagramclone.SectionPagerAdapter;
 import com.example.d.instagramclone.SetBottomNavigation;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 /*
  * camera function
@@ -35,7 +37,10 @@ public class UploadPhotoActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
         Log.d(TAG, "startActivity");
 
-
+        // Create global configuration and initialize ImageLoader with this config
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+			.build();
+        ImageLoader.getInstance().init(config);
 
 
         //check permissions

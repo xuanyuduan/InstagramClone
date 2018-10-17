@@ -46,8 +46,8 @@ public class HomeActivity extends AppCompatActivity {
         setupBottomNavigationView();
 
         SectionPagerAdapter sectionPagerAdapter = new SectionPagerAdapter(getSupportFragmentManager());
-        sectionPagerAdapter.addFragment(new HomeFragment());
         sectionPagerAdapter.addFragment(new CameraFragment());
+        sectionPagerAdapter.addFragment(new HomeFragment());
         ViewPager viewPager = (ViewPager) findViewById(R.id.mainBodyContainer);
         viewPager.setAdapter(sectionPagerAdapter);
 
