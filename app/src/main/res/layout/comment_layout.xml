@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/commnet_profile_photo"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_liked"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/commnet_profile_photo"
+        android:id="@+id/relativeLayout1"
+        android:background="@drawable/main_top_border"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:id="@+id/commnet_username"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commenbt fdksozpgkjopfd"
+            android:layout_toRightOf="@+id/commnet_username"
+                android:id="@+id/comment"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45456 days ago"
+                android:id="@+id/comment_post_time"
+                android:layout_below="@+id/comment"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45456 liked"
+                android:id="@+id/comment_like"
+                android:layout_below="@+id/comment"
+                android:layout_toRightOf="@+id/comment_post_time"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reply"
+                android:id="@+id/comment_reply"
+                android:layout_below="@+id/comment"
+                android:layout_toRightOf="@+id/comment_like"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/likee_this_comment"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_like"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
