@@ -115,7 +115,7 @@ public class GalleryFragment extends Fragment {
         GridImageAdapter adapter = new GridImageAdapter(getActivity(), R.layout.grid_image, mAppend, imgURLs);
         gridView.setAdapter(adapter);
 
-        setImage(imgURLs.get(0), galleryImage, mAppend);
+        //setImage(imgURLs.get(0), galleryImage, mAppend);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

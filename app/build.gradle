@@ -34,12 +34,9 @@ dependencies {
 //    implementation 'com.google.firebase:firebase-messaging:16.0.1'
 //    implementation 'com.google.android.gms:play-services-location:9.2.0'
 
-<<<<<<< HEAD
+
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
-=======
 
-
->>>>>>> f3179a5b77bea0adba0bf97a99f6b45e721e9963
 }
 
 apply plugin: 'com.google.gms.google-services'
